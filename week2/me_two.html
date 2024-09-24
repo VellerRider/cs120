@@ -1,17 +1,172 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <!-- <meta name="description" content="This is QY's about me page."> -->
+        <meta name="description" content="This is QY's about me page.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>assignment 2 cs120</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+            }
+
+            h1, h2 {
+                color:blueviolet;
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+
+            ul {
+                border: 2px solid hsl(160, 100%, 50%);
+                width: fit-content;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            .favorite-food {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 5px solid black;
+                padding: 10px;
+                margin: 10px;
+                background-image: url(background.jpg);
+                width: fit-content;
+            }
+
+            .book-table th {
+                background-color: #f2f2f2;
+            }
+
+            .book-table tr:nth-child(even) {
+                background-color: #efadff62;
+            }
+
+            .book-table tr:nth-child(odd) {
+                background-color: #4d06b878;
+            }
+
+
+            label {
+                text-align: right;
+            } 
+
+            .social-media {
+                display: flex;
+                position: fixed;
+                top: 100px;
+                right: 35px;
+            }
+        </style>
+
     </head>
 
 
     <body>
-        <h1>Coming Soon</h1>
 
-        
-    </body>
+
+    <h1>Qihang Yang</h1>
+    <p>A trip to Yi State. People are nice, fog is red. Feels unsafe.</p>
+    <div>
+        <ul>
+            <li>A dog named dogmeat</li>
+            <li>A cat named catmeat</li>
+            <li>An elephant named elemeat</li>
+        </ul>
+    </div>
+    <div class="favorite-food">
+        <strong><a href="https://www.dunkindonuts.com/en" target="_blank">DUNKIN DONUTS!</a></strong>
     
+        <div style="display: block">First meal I had in USA, so it's my favourite!</div>
+        <div style="display: block;">
+            <img src="donut.jpg" alt="Dunkin's Famous Donut" height="300" style="display: inline-block;"> 
+            <div style="display: inline-block">Donut, you know what I'm talking about!<br>We love yummy donuts! Munchie munchie!</div>
+        </div>
+    </div> 
+    <table class="book-table">
+        <tr>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Author</th>
+            <th>Summary</th>
+        </tr>
+        <tr>            
+            <td>A Song of Ice and Fire</td>
+            <td><img src="asoiac.jpg" height="50"></td>
+            <td>George R. R. Martin</td>
+            <td>Real story happens in unreal history.</td>
+        </tr>
+        <tr>            
+            <td>Lord of the Rings</td>
+            <td><img src="lors.jpg" height="50"></td>
+            <td>Tolkien</td>
+            <td>Praise the goodness of mankind.</td>
+        </tr>
+        <tr>            
+            <td>Siddhartha</td>
+            <td><img src="Siddhartha.jpg" height="50"></td>
+            <td>Hermann Hesse</td>
+            <td>The Journey itself is what matters.</td>
+        </tr>
+        <tr>            
+            <td>The Untitiled</td>
+            <td><img src="ha.png" height="50"></td>
+            <td>John Doe</td>
+            <td>Not finished... yet!</td>
+        </tr>
+    </table>
+
+    <div>
+        <form style="display: block;">
+            <table>
+                <tr>
+                    <td><label for="firstName">First Name:</label></td>
+                    <td><input type="text" id="firstName" name="firstName" required></td>
+                </tr>
+                <tr>
+                    <td><label for="lastName">Last Name:</label></td>
+                    <td><input type="text" id="lastName" name="lastName" required></td>
+                </tr>
+                <tr>
+                    <td><label for="city">City:</label></td>
+                    <td><input type="text" id="city" name="city" required></td>
+                </tr>
+                <tr>
+                    <td><label for="state">State:</label></td>
+                    <td>
+                        <select id="state" name="state" required>
+                            <option value="">Select State</option>
+                            <option value="AL">Alabama</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="CA">California</option>
+                            <option value="DC">District of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="UT">Utah</option>
+                            <option value="WA">Washington</option>
+                            <option value="NY">New York</option>
+                            <option value="TX">Texas</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" style="margin-left: 100px; margin-top: 10px;">Submit</button>
+        </form>
+    </div>
+
+    <div class="social-media">
+        <a href="https://www.facebook.com">
+            <img src="facebook.png" alt="Facebook" height="50">
+        </a>
+        <a href="https://www.x.com">
+            <img src="x.png" alt="X" height="50">
+        </a>
+    </div>
+
+    </body>
+
 
 </html>
