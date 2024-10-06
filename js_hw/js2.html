@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 2</title>
+</head>
+
+<body>
+    <h1>JS 2</h1>
+    <script>
+        let f = prompt("Enter temperature in fahrenheit:"); 
+        f = parseFloat(f);
+        if (!isNaN(f)) {
+            let celsius = (f - 32) * (5 / 9);
+            alert(f + " Fahrenheit is " + celsius + " Celsius.");// no need to format output.
+        } else {
+            alert("Please enter a valid number for Fahrenheit.");
+        }
+        let c = prompt("Enter temperature in celsius:");
+        c = parseFloat(c);
+        if (!isNaN(c)) {
+            let fahrenheit = (c * (9 / 5)) + 32;
+            alert(c + " Celsius is " + fahrenheit + " Fahrenheit.")
+        }
+        
+
+    </script>
+</body>
+</html>

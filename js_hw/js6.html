@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 6</title>
+</head>
+
+<body>
+    <h1>JS 6</h1>
+    <div id="answer"></div>
+    <script>
+        function count(arr, num) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < num) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        function testCount() {
+            let numbers = [3, 55, 30, 28, 9, 12];
+            let value = 10;
+            let res = count(numbers, value);
+            document.getElementById("answer").innerText = 
+                "There are " + res + " numbers less than " + value + " in the array " + numbers + ".";
+        }
+
+        testCount();
+
+
+    </script>
+</body>
+</html>

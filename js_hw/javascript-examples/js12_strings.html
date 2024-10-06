@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS Strings</title>
+	<style type="text/css">
+		html,body {font-size: 30px;}
+	</style>
+</head>
+
+<body>
+	<script language="javascript">
+	s = "The quick brown fox";
+	document.write (s.length + "<br>");
+	document.write (s.charAt(2) + "<br>");
+	i = s.indexOf("quick");
+	document.write (i + "<br>");
+	document.write (s.indexOf(" ",i)    + "<br>");
+	document.write (s.indexOf("dog")    + "<br>");
+	str = s.slice(4, 9);
+	document.write (str    + "<br>");
+	arr = s.split(" ");
+	document.write (arr    + "<br>");
+		
+		
+	</script>
+</body>
+</html>

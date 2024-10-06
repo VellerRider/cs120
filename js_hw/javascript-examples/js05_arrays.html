@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS Functions</title>
+<style type="text/css">
+.item {width: 110px; display:inline-block;}
+.price {width: 100px; display:inline-block;  text-align:right}
+</style>
+</head>
+<body>
+    <script>
+        const PRICES = [4, 3, 2.5, 2];
+        const ITEMS = ["Hamburger", "Hotdogs", "French Fries", "Soda"]
+        function showPrice(price)
+        {
+            fprc = price.toFixed(2);
+            return '$ ' + fprc;
+        }
+        function displayMenu()
+        {
+            for (i=0; i< ITEMS.length; i++)
+            {
+                document.write("<div class='menu-item'>")
+                document.write("<div class='item'>" + (i+1) + ". " + ITEMS[i] +"</div>")
+                document.write("<div class='price'>"+ showPrice(PRICES[i]) +"</div>")
+                document.write ("</div>");
+            }
+        }
+
+        function getItem()
+        {
+            order = 0;
+            while(true)
+            {
+                order =prompt ("Enter the number of the item or STOP to complete your order", "STOP")
+                if (order.toUpperCase() == "STOP") 
+                {
+                    order =0;
+                    break;
+                }
+                order = parseInt(order);
+                if (order >= 1 && order <= ITEMS.length)
+                    break;
+                else 
+                    alert("Invalid entry - try again");
+            }
+            return order;
+        }
+
+        function order()
+        {
+            quantities = [];
+            for (i=0; i<ITEMS.length;i++) 
+                quantities.push(0);
+            while (item = getItem()) // false for stop
+            {
+                quantities[item-1]++;
+            }
+            s = "Your Order\n";
+            for (i=0; i< ITEMS.length; i++)
+                s+= quantities[i] + " " + ITEMS[i] + "\n";
+           
+            alert(s);
+        }
+
+        displayMenu();
+    </script>
+    <hr />
+    <button onclick="order()">Place Order</button>
+</body>
+</html>

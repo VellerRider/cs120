@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Library Demo</title>
+</head>
+
+<body>
+	<h1>JavaScript Library Demo</h1>
+	<script>
+	//the math object
+	document.write ("Get a random number between 1 and 15<br>")
+	r1 = Math.random()
+		console.log(r1)
+	r2 = r1 *14
+		console.log(r2)
+	r3 = r2 + 1
+		console.log(r3)
+	r4 = Math.round(r3)
+	document.write ("The random number is: " + r4 + "<br>")
+	
+	document.write("<hr>")
+		
+	//the string object
+	s = "The quick brown dog";
+	document.write("Number of letters in \"" + s +  "\" is: " + s.length + "<br>");
+	i = s.indexOf("dog");
+	if (i < 0) document.write("No dogs here ... <br>")
+	else document.write("Found a dog at index: " + i + " <br>")
+		
+	document.write("<hr>")
+		
+	//the date object
+	today = new Date()
+	document.write (today + "<br>")
+	min = today.getMinutes();
+	min = min + "";
+	len = min.length;
+	if (len == 1) min = "0" + min;
+	document.write ("The time is " + today.getHours() + ":" + min + "<br>")
+	
+	</script>
+</body>
+</html>

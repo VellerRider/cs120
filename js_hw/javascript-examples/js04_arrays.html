@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Date Demo</title>
+</head>
+
+<body>
+    <script>
+    days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+    months= ["Jan", "Feb","Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    today = new Date();
+    day= days[today.getDay()];
+    console.log("The day is: " + day);
+    month = months[today.getMonth()];
+    dayOfMonth = today.getDate();
+    year = today.getFullYear();
+    console.log ("Today is: " +
+                    day + " " + month + " " +
+                    dayOfMonth +", " + year);
+    
+    </script>
+</body>
+</html>

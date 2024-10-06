@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 1</title>
+</head>
+
+<body>
+    <h1>JS 1</h1>
+    <!-- javascript code is enclosed in <script> tags -->
+    <script>
+      let firstName = prompt ("What is your first name?"); 
+      if (!firstName) {
+        firstName = "NA"
+      }
+      let lastName = prompt ("What is your last name?"); 
+      if (!lastName) {
+        lastName = "NA"
+      }
+      alert("Your name is " + firstName + " " + lastName + ".");
+
+      let children = prompt ("How many children do you have?"); 
+      if (!children || isNaN(children)) {
+        children = 0;
+      } else {
+        children = parseInt(children);
+      }
+      let msg = "";
+      if (children == 0) {
+        msg = "You have no children.";
+      } else {
+        msg = "You have " + children + " children.";
+      }
+      document.write (msg);
+    </script>
+</body>
+</html>

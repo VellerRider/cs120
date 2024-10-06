@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS Basics</title>
+</head>
+
+<body>
+    <h1>JS Demo</h1>
+    <div id="area1">abc</div>
+    <!-- javascript code is enclosed in <script> tags -->
+    <script>
+      document.write("hey<br />");    // write to page
+      alert("This is a popup");       //popup
+                                      //write to element on page
+      document.getElementById("area1").innerHTML = "hello";  
+
+      x = 100;                        // declare a variable using assignment or var/let
+      var y = 101;
+      let z = 102;
+      const w = 103;
+      document.write (x);
+      document.write("<br />");
+      document.write("y is " + y + "<br />");
+      console.log("z is "+ z)
+      w = 104;
+
+      age = prompt ("how old are you?", "0"); //second param is the default val
+      if (! isNaN(age))   //result of prompt is a string- check if it is numeric
+      {
+        next = parseInt(age) + 1;            
+        document.write ("Next year you will be " + next + " years old <br />");
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS Operators and Condtionals</title>
+</head>
+
+<body>
+    <script>
+        x = 3;
+        odd = x%2;
+
+        document.write(odd ? (x + " is odd"): x + " is even")
+        document.write("<br />")
+
+        if (odd)
+            document.write(x + " is odd")    
+        else 
+            document.write(x + " is even") 
+        document.write("<br />")
+
+        n = prompt("guess a number", "0");
+        answer = 10;
+        if (n < answer)
+            alert("too low")
+        else if (n >answer)
+            alert("too low")
+        else 
+            alert("correct!")
+
+        //get a random number
+        r = Math.random() * 9 + 1
+        document.write("random number between 1 and 10 is: " + r + "<br />")
+        r= parseInt(r)
+        document.write("random whole number between 1 and 10 is: " + r)
+
+    </script>
+    
+    </ul>
+</body>
+</html>
