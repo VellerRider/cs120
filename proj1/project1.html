@@ -1,13 +1,204 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="This is QY's about me page.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>assignment 2 cs120</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTZ - Boston's Best Cover Band</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
-    <body>
-        <h1>Comming Soon</h1>
-    </body>
+    <style>    
 
+        .info blockquote{
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .info cite{
+            display: block;
+            margin-bottom: 10rem;
+        }
+
+        /* latest show */
+        .latest-show {
+            margin-top: 5%;
+            font-size: 1.5rem;
+            display: block;
+            gap: 5%;
+        }
+        .latest-show iframe{
+            width: 100%;
+            height: 100%;
+        }
+        .video-container {
+            position: relative;
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 56.25%; 
+
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* reviews */
+        .reviews-title{
+            margin-bottom: 5rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="sticky-container">
+        <p><a href="book_event.html">Book now</a> for a 20% discount!</p>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="project1.html">
+                    <img src="asset/DTZ.png" alt="DTZ Logo">
+                </a>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/dtzcoverband" target="_blank"><img src="asset/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.x.com/dtzcoverband" target="_blank"><img src="asset/x.png" alt="X"></a>
+                    <a href="https://www.youtube.com/dtzcoverband" target="_blank"><img src="asset/youtube.png" alt="YouTube"></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="project1.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="book_event.html">Book Event</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="past_events.html">Past Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="join_us.html">Join Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <span class="hero-title">Boston's Best in Pop, Rock, and Country!</span>
+            <a href="book_event.html">Book Now!</a>
+        </div>
+    </section>
+    <main>
+
+        <section class="info">
+            <blockquote>"Damn it, just give them a Grammy!"</blockquote>
+            <cite> - BoStreetJournal</cite>
+
+            <p>DTZ is Boston's premier cover band, bringing your favorite hits to life 
+                at events across the city. With our diverse repertoire spanning pop, 
+                rock, and country, we're the perfect choice for any occasion.</p>
+        </section>
+
+        <section class="latest-show">
+            <h2>Check out our latest show!</h2>
+            <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=lnOZawbYJuFqDmrt" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media
+                gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+
+        <section class="band-element">
+        <h2 style="margin-bottom: 5%;">Check out our latest albums!</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+            <div class="col">
+                <div>
+                    <img src="asset/album1.png" alt="Album 1" class="img-fluid">
+                    <div class="band-element-title"><a href=#>PINK SPIDER</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <img src="asset/album2.png" alt="Album 2" class="img-fluid">
+                    <div class="band-element-title"><a href=#>WILD COLOR</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <img src="asset/album3.png" alt="Album 3" class="img-fluid">
+                    <div class="band-element-title"><a href=#>HANDCUFFED</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <img src="asset/album4.png" alt="Album 4" class="img-fluid">
+                    <div class="band-element-title"><a href=#>TMHW!</a></div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+        <section class="reviews">
+            <h2 class="reviews-title">What Our Clients Say</h2>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <blockquote>"Best band ever! Made our wedding unforgettable!"</blockquote>
+                        <cite>- Sarah & Mike</cite>
+                    </div>
+                    <div class="col">
+                        <blockquote>"Professional and versatile. Perfect for our corporate event."</blockquote>
+                        <cite>- John, Event Planner</cite>
+                    </div>
+                    <div class="col">
+                        <blockquote>"Incredible energy! They keep the crowd dancing all night."</blockquote>
+                        <cite>- Emily, Music Fan</cite>
+                    </div>
+                    <div class="col">
+                        <blockquote>"Great song selection. Hit with both teens and adults!"</blockquote>
+                        <cite>- The Johnsons</cite>
+                    </div>
+                    <div class="col">
+                        <blockquote>"Always packs the house. Our go-to band for a great night."</blockquote>
+                        <cite>- Alex, Club Owner</cite>
+                    </div>
+                    <div class="col">
+                        <blockquote>"Talented musicians. Their covers are better than the originals!"</blockquote>
+                        <cite>- Lisa, Regular Fan</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <section class="info">
+            <p>We are Boston local, our members are passionate about music, and charities. That's why we're good. We donate $1M to local charities for each event.</p>
+        </section>
+        <br>
+    </main>
+
+    <!--Floating!!-->
+    <!-- <div class="floating-sidebar">
+        <a href="book_event.html" class="sidebar-button">Book Now</a>
+    </div> -->
+
+
+    <footer>
+        <p>&copy; 2024 DTZ Cover Band. All rights reserved.</p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
+
+</body>
 </html>
