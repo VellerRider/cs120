@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 2_6</title>
+<style>
+    .saved_state {
+        border: 1px solid black;
+        padding: 10px;
+        width: 300px;
+        min-height: 50px;
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+    <h1>JS 2_6</h1>
+    <select id="sl">Select your state!</select>
+    <button id="addst" onclick="addState()">Add State</button>
+    <div>
+        Here are the states you selected:
+        <div id="saved_state" class="saved_state">
+
+        </div>
+        <button onclick="clearState()">Clear States</button>
+    </div>
+    <script>
+        const size = 10;
+        const states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia"];
+        const removedStates = [];
+        let index = 1;
+        let sl = document.getElementById("sl");
+        for (let i = 0; i < size; i++) {
+            let ele = document.createElement("option");
+            ele.value = states[i];
+            ele.text = states[i];
+            sl.appendChild(ele);
+        }
+
+        function addState() {
+            let nxtState = document.createElement("div");
+            let v = document.getElementById("sl").value;// ==name
+            nxtState.innerHTML =  index + ". " + v;
+            document.getElementById("saved_state").appendChild(nxtState);
+            index++;
+
+
+            let removed = sl.querySelector(`option[value=${v}]`);
+            document.getElementById("sl").removeChild(removed);
+            storeState(removed);
+        }
+
+        function storeState(removed) {
+            removedStates.push(removed);
+        }
+
+        function clearState() {
+            document.getElementById("saved_state").innerHTML = "";
+            for (let i = 0; i < removedStates.length; i++) {
+                sl.appendChild(removedStates[i]);
+            }
+            index = 1;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 2_5</title>
+<style>
+    .saved_state {
+        border: 1px solid black;
+        padding: 10px;
+        width: 300px;
+        min-height: 50px;
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+    <h1>JS 2_5</h1>
+    <select id="sl">Select your state!</select>
+    <button id="addst" onclick="addState()">Add State</button>
+    <div>
+        Here are the states you selected:
+        <div id="saved_state" class="saved_state">
+
+        </div>
+        <button onclick="clearState()">Clear States</button>
+    </div>
+    <script>
+        const size = 10;
+        const states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia"];
+        let sl = document.getElementById("sl");
+        for (let i = 0; i < size; i++) {
+            let ele = document.createElement("option");
+            ele.value = states[i];
+            ele.text = states[i];
+            // can only append element
+            sl.appendChild(ele);
+        }
+
+        function addState() {
+            let nxtState = document.createElement("div");
+            nxtState.innerHTML = document.getElementById("sl").value;
+            document.getElementById("saved_state").appendChild(nxtState);
+        }
+
+        function clearState() {
+            document.getElementById("saved_state").innerHTML = "";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 2_4</title>
+</head>
+<body>
+    <h1>JS 2_4</h1>
+    <form>
+        <label for="name">Your name?</label>
+        <input type="text" id="name">
+        <br>
+        <button id="bt1" >Hello</button>
+        <button id="bt2" >Good bye</button>
+        <button id="bt3" >Greetings</button>
+    </form>
+    <script>
+        const username = document.getElementById("name").value;
+        window.onload = () => {
+            bt1 = document.getElementById("bt1");
+            bt1.onclick = speak;
+            document.getElementById("bt2").onclick = speak;
+            document.getElementById("bt3").onclick = speak;
+        }
+        function speak() {
+            let username = document.getElementById("name").value;
+            alert(this.innerHTML + " " + username);
+        }
+        
+
+    </script>
+</body>
+</html>
