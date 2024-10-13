@@ -11,8 +11,8 @@
     <script>
         let s = "Pat, Chris, Marlon, Ferncroft, Assunta";
         let arr = s.split(", ");
-        let items = arr.map((name, index) => `${index}.${name}<br>`);
-        document.write(res);
+        let items = arr.map((name, index) => `${index+1}. ${name}<br>`);
+        document.write(items.join(""));
 
         
 
