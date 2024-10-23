@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JSON 2</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <h1>JSON 2</h1>
+    <div id="songs-container"></div>
+    <script>
+      $.getJSON("songs.json", function(data) {
+        console.log(typeof data);
+        let content = data.map(song => `
+          <div class="song">
+              <div class="title" style="font-weight: Bold">${song.title}</div>
+              <div class="details">Artist: ${song.artist}</div>
+              <div class="details">Genre: ${song.genres.join(', ')}</div>
+              <div class="details">Released: ${song.year}</div>
+              <br>
+          </div>
+        `).join('');
+        
+
+        document.getElementById("songs-container").innerHTML = content;
+      });
+    </script>
+
+</body>
+</html>

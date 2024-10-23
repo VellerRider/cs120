@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JSON 3</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <h1>JSON 3</h1>
+    <form id="Filter">
+      <select id="select-genre">
+        <option value="">Select a genre</option>
+      </select>
+      <button type="button" id="filter-button">Filter</button>
+    </form>
+    <div id="songs-container"></div>
+
+    <script>
+      $.getJSON("songs.json", function(data) {
+        const genres = new Set();
+
+        data.forEach(song => {
+          song.genres.forEach(g => {
+            genres.add(g);
+          });
+        })
+
+        genres.forEach(g => {
+          $("#select-genre").append(
+            $("<option></option>")
+              .val(g)
+              .text(g)
+          );
+        });
+
+        $("#filter-button").click(function() {
+          let gval = $("#select-genre").val();
+          if (!gval) {
+              $("#songs-container").html("<p>Please select a genre</p>");
+              return;
+          }
+          let songdata = data.filter(song => {
+            return song.genres.includes(gval);
+          })
+          let content = songdata.map(song => `
+          <div class="song">
+              <div class="title" style="font-weight: Bold">${song.title}</div>
+              <br>
+          </div>
+        `).join('');
+        $("#songs-container").html(content || "<p>No songs found for this genre</p>");
+        })
+      });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSON 1</title>
+</head>
+
+<body>
+    <h1>JSON 1</h1>
+    <pre id="songs"></pre>
+    <script>
+      const songs = [
+        {
+          "title": "Wild Flowers",
+          "artist": "Sandy Lam",
+          "year": 1993,
+          "genres": ["CantoPop"]
+        },
+        {
+          "title": "Wither and Thrive",
+          "artist": "Sandy Lam",
+          "year": 2012,
+          "genres": ["CantoPop"]
+        },
+        {
+          "title": "Persimmon",
+          "artist": "Sandy Lam",
+          "year": 2012,
+          "genres": ["MandoPop"]
+        },
+        {
+          "title": "Naked Secret",
+          "artist": "Sandy Lam",
+          "year": 2014,
+          "genres": ["CantoPop", "Jazz"]
+        },
+        {
+          "title": "Reset",
+          "artist": "Sandy lam",
+          "year": 2018,
+          "genres": ["MandoPop"]
+        },
+        {
+          "title": "Dancing Mad",
+          "artist": "Nobuo Uematsu",
+          "year": 1994,
+          "genres": ["OST"]
+        },
+        {
+          "title": "Fantasy",
+          "artist": "Mariah Carey",
+          "year": 1995,
+          "genres": ["Pop soul", "R&B"]
+        },
+        {
+          "title": "Natural Mystic",
+          "artist": "Bob Marley and the Wailers",
+          "year": 1977,
+          "genres": ["Reggae"]
+        },
+        {
+          "title": "No Woman No Cry",
+          "artist": "Bob Marley and the Wailers",
+          "year": 1974,
+          "genres": ["Reggae"]
+        },
+        {
+          "title": "When I think of You",
+          "artist": "a-mei",
+          "year": 1997,
+          "genres": ["MandoPop"]
+        },
+        {
+          "title": "Simple Times",
+          "artist": "Kacey Musgraves",
+          "year": 2021,
+          "genres": ["Country"]
+        }
+      ]
+      document.getElementById("songs").textContent = JSON.stringify(songs, null, 2);
+    </script>
+</body>
+</html>
