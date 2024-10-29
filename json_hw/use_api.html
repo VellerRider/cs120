@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>API Homework</title>
+</head>
+
+<body>
+    <h1>API Homework</h1>
+    <script>
+        fetch("https://official-joke-api.appspot.com/random_joke")
+            .then(res => res.json())
+            .then(data => {
+                document.write("<p>Here is a joke</p>"+data.setup);
+                document.write("<br>");
+                document.write(data.punchline);
+        });
+    </script>
+</body>
+</html>
